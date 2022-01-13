@@ -1,4 +1,8 @@
-require("../databaseConnection/connection");
+//Creamos una constante que requiere el fichero  de la conexión a la base de datos 
+const connection = require('../dataBaseConnection/connection.js');
+
+//Ejecutamos nuestra constante y con la notación del '.' podemos accionar nuestra función que es la conexión a la base de datos
+connection.dataBase();
 
 //Creamos un endpoint para mostrar un usuario en particular filtrado por ID de nuestra tabla registro_usuarios de nuestra base de datos
 app.get('/registro_usuarios/:id', (req, res) => {

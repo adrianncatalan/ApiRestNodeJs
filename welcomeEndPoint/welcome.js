@@ -1,5 +1,5 @@
 //Creamos una constante que requiere el fichero  de la conexión a la base de datos 
-const connection = require('../dataBaseConnection/connection');
+const connection = require('../dataBaseConnection/connection.js');
 
 //Ejecutamos nuestra constante y con la notación del '.' podemos accionar nuestra función que es la conexión a la base de datos
 connection.dataBase();
