@@ -4,13 +4,17 @@ const connection = require('../dataBaseConnection/connection.js');
 //Ejecutamos nuestra constante y con la notación del '.' podemos accionar nuestra función que es la conexión a la base de datos
 connection.dataBase();
 
-//Creamos un endpoint para mostrar un saludo en la parte del cliente para comprobar que todo haya ido bien
-const saludo = () => {
+const express = require('express');
 
-    app.get('/', (req, res) => {
+const router = express.Router();
 
-        res.send('Bienvenid@s a mi API desarrollada en NodeJs');
+router.get('/', (req, res) => {
 
-    });
+    res.send('Bienvenid@s a mi API desarrollada en NodeJs');
 
-}
+});
+
+module.exports = router;
+
+
+
