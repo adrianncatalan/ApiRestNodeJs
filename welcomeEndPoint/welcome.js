@@ -1,16 +1,16 @@
-require("../databaseConnection/connection").connection;
+//Creamos una constante que requiere el fichero  de la conexión a la base de datos 
+const connection = require('../dataBaseConnection/connection');
 
-//Creamos un endpoint de bienvenida para probar nuestra conexión
+//Ejecutamos nuestra constante y con la notación del '.' podemos accionar nuestra función que es la conexión a la base de datos
+connection.dataBase();
+
+//Creamos un endpoint para mostrar un saludo en la parte del cliente para comprobar que todo haya ido bien
 const saludo = () => {
 
-    return 'Bienvenid@s a mi API desarrollada en NodeJs';
+    app.get('/', (req, res) => {
+
+        res.send('Bienvenid@s a mi API desarrollada en NodeJs');
+
+    });
 
 }
-
-exports.saludo = saludo;
-
-// app.get('/', (req, res) => {
-
-//     res.send('Bienvenid@s a mi API desarrollada en NodeJs')
-
-// });
