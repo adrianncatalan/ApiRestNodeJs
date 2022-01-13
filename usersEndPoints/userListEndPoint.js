@@ -1,3 +1,5 @@
+require("../databaseConnection/connection");
+
 //Creamos un endpoint y mostramos todos los usuarios registrados en la tabla de nuestra base de datos registro_usuarios
 app.get('/lista_usuarios', (req, res) => {
 

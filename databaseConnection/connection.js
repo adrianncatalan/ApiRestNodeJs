@@ -1,3 +1,6 @@
+//Creamos una constante que guarda en una función flecha nuestra conexión
+const connection = () =>{
+
 //Creamos unaconstante para hacer un require a la dependencia express, nos permite conectarnos a la base de datos
 const express = require('express');
 
@@ -8,7 +11,7 @@ const mysql = require('mysql');
 const bodyParser = require('body-parser');
 
 //Un mensaje de bienvenida para probar la conexión a nuestra base de datos
-const bienvenida = require("./bienvenida");
+const bienvenida = require("../welcomeEndPoint/welcome").saludo();
 
 //Creamos una constante para utilizar el puerto 3050
 const PORT = process.env.PORT || 3050;
@@ -37,8 +40,15 @@ connection.connect(error => {
 
     if (error) throw error;
 
-    console.log('Servidor de base datos en funcionamiento');
+    return "hola";
 
 });
 
 app.listen(PORT, () => console.log(`Servidor haciendo uso del puerto ${PORT}`));
+
+}
+
+connection();
+
+//Exportamos nuestra conexión a la base de datos para luego usarla en diferentes ficheros cuando sea necesario
+exports.connection = connection;

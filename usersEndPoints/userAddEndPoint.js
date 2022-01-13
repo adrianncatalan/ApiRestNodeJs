@@ -1,5 +1,7 @@
- //Creamos un endpoint para agregar usuarios a nuestra tabla registro_usuarios en nuestra base de datos
- app.post('/agregar_usuario', (req, res) => {
+require("../databaseConnection/connection");
+
+//Creamos un endpoint para agregar usuarios a nuestra tabla registro_usuarios en nuestra base de datos
+app.post('/agregar_usuario', (req, res) => {
 
     //res.send('Nuevo usuario'); --> Código de prueba del funcionamiento del endpoint
 
@@ -28,7 +30,7 @@
         departamento: req.body.departamento,
 
         cargo: req.body.cargo,
-        
+
         administrador: req.body.administrador
     };
 

@@ -1,3 +1,5 @@
+require("../databaseConnection/connection");
+
 //Creamos un endpoint para eliminar un usuario en particular en la tabla registro_usuarios de nuestra base de datos 
 app.delete('/eliminar_usuario/:id', (req, res) => {
 

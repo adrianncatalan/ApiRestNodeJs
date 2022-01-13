@@ -1,4 +1,6 @@
- //Creamos un endpoint para mostrar un usuario en particular filtrado por ID de nuestra tabla registro_usuarios de nuestra base de datos
+require("../databaseConnection/connection");
+
+//Creamos un endpoint para mostrar un usuario en particular filtrado por ID de nuestra tabla registro_usuarios de nuestra base de datos
 app.get('/registro_usuarios/:id', (req, res) => {
 
     //res.send('Tomar usuario por ID'); --> Código de prueba del funcionamiento del endpoint

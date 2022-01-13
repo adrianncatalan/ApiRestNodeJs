@@ -1,14 +1,22 @@
 {
-  "name": "apinodejs",
+  "name": "apirestnodejs",
   "version": "1.0.0",
-  "description": "",
+  "description": "Creación de una Api Rest con NodeJs para realizar consultas, modificaciones, actualizaciones y supresión de usuarios, servicios y vehículos en una base de datos MySql.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adrianncatalan/ApiRestNodeJs.git"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adrianncatalan/ApiRestNodeJs/issues"
+  },
+  "homepage": "https://github.com/adrianncatalan/ApiRestNodeJs#readme",
   "dependencies": {
     "body-parser": "^1.19.1"
   },
