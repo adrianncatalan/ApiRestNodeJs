@@ -1,11 +1,5 @@
-//Creamos una constante que requiere el fichero  de la conexión a la base de datos 
-const connection = require('../dataBaseConnection/connection.js');
-
-//Ejecutamos nuestra constante y con la notación del '.' podemos accionar nuestra función que es la conexión a la base de datos
-connection.dataBase();
-
 //Creamos un endpoint para eliminar un usuario en particular en la tabla registro_usuarios de nuestra base de datos 
-app.delete('/eliminar_usuario/:id', (req, res) => {
+const eliminar_usuario = (req, res, connection) => {
 
     //res.send('Eliminar usuario'); --> Código de prueba del funcionamiento del endpoint
 
@@ -21,4 +15,7 @@ app.delete('/eliminar_usuario/:id', (req, res) => {
 
     });
     
-});
+}
+
+//Exportamos el bloque de código que permite consultar y mostrar a todos los usuarios de la base de datos
+module.exports.eliminar_usuario = eliminar_usuario;

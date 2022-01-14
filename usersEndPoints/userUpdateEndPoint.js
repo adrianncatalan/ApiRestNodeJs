@@ -1,11 +1,5 @@
-//Creamos una constante que requiere el fichero  de la conexión a la base de datos 
-const connection = require('../dataBaseConnection/connection.js');
-
-//Ejecutamos nuestra constante y con la notación del '.' podemos accionar nuestra función que es la conexión a la base de datos
-connection.dataBase();
-
 //Creamos un endpoint para actualizar usuarios a nuestra tabla registro_usuarios de nuestra base de datos
-app.put('/actualizar_usuario/:id', (req, res) => {
+const actualizar_usuario = (req, res, connection) => {
 
     //res.send('Actualizar usuario'); --> Código de prueba del funcionamiento del endpoint
 
@@ -13,7 +7,7 @@ app.put('/actualizar_usuario/:id', (req, res) => {
 
     const { telefono, email, contacto_emergencia } = req.body;
 
-    const sql = `UPDATE registro_usuarios SET telefono = '${telefono}', email= '${email}', contacto_emergencia= '${contacto_emergencia} WHERE id_usuario = "${id}"`;
+    const sql = `UPDATE registro_usuarios SET telefono = '${telefono}', email= '${email}', contacto_emergencia= '${contacto_emergencia}' WHERE id_usuario = '${id}'`;
 
     connection.query(sql, error => {
 
@@ -23,4 +17,7 @@ app.put('/actualizar_usuario/:id', (req, res) => {
 
     });
 
-});
+}
+
+//Exportamos el bloque de código que permite consultar y mostrar a todos los usuarios de la base de datos
+module.exports.actualizar_usuario = actualizar_usuario;

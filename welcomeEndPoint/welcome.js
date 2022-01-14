@@ -10,7 +10,7 @@ const router = express.Router();
 
 router.get('/', (req, res) => {
 
-    res.send('Bienvenid@s a mi API desarrollada en NodeJs');
+    res.send('Bienvenid@s a mi API desarrollada con NodeJs');
 
 });
 

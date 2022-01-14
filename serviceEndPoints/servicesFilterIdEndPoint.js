@@ -10,7 +10,7 @@ app.get('/registro_servicio/:id', (req, res) => {
     //res.send('Tomar servicio por ID'); --> Código de prueba del funcionamiento del endpoint
     const { id } = req.params;
 
-    const sql = `SELECT * FROM registro_servicios WHERE id_Usuario = "${id}"`;
+    const sql = `SELECT * FROM registro_servicios WHERE id_usuario = "${id}"`;
 
     connection.query(sql, (error, result) => {
 

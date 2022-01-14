@@ -1,41 +1,35 @@
-//Creamos una constante que requiere el fichero  de la conexión a la base de datos 
-const connection = require('../dataBaseConnection/connection.js');
-
-//Ejecutamos nuestra constante y con la notación del '.' podemos accionar nuestra función que es la conexión a la base de datos
-connection.dataBase();
-
 //Creamos un endpoint para agregar usuarios a nuestra tabla registro_usuarios en nuestra base de datos
-app.post('/agregar_usuario', (req, res) => {
+const agregar_usuario = (req, res, connection) => {
 
     //res.send('Nuevo usuario'); --> Código de prueba del funcionamiento del endpoint
 
-    const sql = 'insert into registro_usuarios set ?';
+    const sql = 'INSERT INTO registro_usuarios SET ?';
 
     const usuario_obj = {
 
-        id_usuario: req.body.user.idUser,
+        id_usuario: req.body.id_usuario,
 
-        nombre: req.body.user.name,
+        nombre: req.body.nombre,
 
-        apellido: req.body.user.surname,
+        apellido: req.body.apellido,
 
-        telefono: req.body.user.phone,
+        telefono: req.body.telefono,
 
-        email: req.body.user.email,
+        email: req.body.email,
 
-        clave: req.body.user.password,
+        clave: req.body.clave,
 
-        contacto_emergencia: req.body.user.emergencyContactPhone,
+        contacto_emergencia: req.body.contacto_emergencia,
 
-        fecha_alta: req.body.user.date,
+        fecha_alta: req.body.fecha_alta,
 
-        cantidad_vehiculos: req.body.user.numbersVehicles,
+        cantidad_vehiculos: req.body.cantidad_vehiculos,
 
-        departamento: req.body.user.department,
+        departamento: req.body.departamento,
 
-        cargo: req.body.user.position,
+        cargo: req.body.cargo,
 
-        administrador: req.body.user.admin
+        administrador: req.body.administrador
     };
 
     connection.query(sql, usuario_obj, error => {
@@ -46,4 +40,7 @@ app.post('/agregar_usuario', (req, res) => {
 
     });
 
-}); 
+}
+
+//Exportamos el bloque de código que permite agregar al usuario
+module.exports.agregar_usuario = agregar_usuario;
