@@ -113,3 +113,13 @@ app.put('/actualizar_vehiculo/:id', (req, res) => actualizar_vehiculo(req, res, 
 app.delete('/eliminar_vehiculo/:id', (req, res) => eliminar_vehiculo(req, res, connection));
 
 app.get('/filtrar_id_vehiculo/:id', (req, res) => filtrar_id_vehiculo(req, res, connection));
+
+//-----------------------------------------------------Comienzo de los endpoints user - vehicles----------------------------------------------------------------
+
+//Requiriendo el fichero que permite mostrar las información del usuario y su lista vehicular filtrado por ID
+
+const filtrar_id_usuario_vehiculo = require('./usersVehiclesMiddleware/userVehiclesID.js').filtrar_id_usuario_vehiculo;
+
+//Creando el endpoint para mostrar la información consultada
+
+app.get('/filtrar_id_usuario_vehiculo/:id', (req, res) => filtrar_id_usuario_vehiculo(req, res, connection));
