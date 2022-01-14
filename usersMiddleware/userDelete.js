@@ -1,7 +1,5 @@
-//Creamos un endpoint para eliminar un usuario en particular en la tabla registro_usuarios de nuestra base de datos 
+//Creamos una función middleware para eliminar un usuario en particular en la tabla registro_usuarios de nuestra base de datos 
 const eliminar_usuario = (req, res, connection) => {
-
-    //res.send('Eliminar usuario'); --> Código de prueba del funcionamiento del endpoint
 
     const { id } = req.params;
 
@@ -14,7 +12,7 @@ const eliminar_usuario = (req, res, connection) => {
         res.send('Usuario eliminado exitosamente.')
 
     });
-    
+
 }
 
 //Exportamos el bloque de código que permite consultar y mostrar a todos los usuarios de la base de datos

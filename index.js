@@ -26,19 +26,29 @@ app.listen(PORT, () => {
 
 });
 
+//-----------------------------------------------------Endpoint de bienvenida-------------------------------------------------------------------------
+
+// Requiriendo el fichero de bienvenida
+
+const welcome = require('./welcomeMiddleware/welcome.js').welcome;
+
+//Creando el endpoint de bienvenida
+
+app.get('/', (req, res) => welcome(req, res));
+
 //-----------------------------------------------------Comienzo de los endpoints users----------------------------------------------------------------
 
 //Requiriendo todos lo ficheros que permiten realizar consultas, modificaciones, actualizaciones y supresiones de los users
 
-const lista_usuarios = require('./usersEndPoints/userListEndPoint.js').lista_usuarios;
+const lista_usuarios = require('./usersMiddleware/userList.js').lista_usuarios;
 
-const agregar_usuario = require('./usersEndPoints/userAddEndPoint.js').agregar_usuario;
+const agregar_usuario = require('./usersMiddleware/userAdd.js').agregar_usuario;
 
-const actualizar_usuario = require('./usersEndPoints/userUpdateEndPoint.js').actualizar_usuario;
+const actualizar_usuario = require('./usersMiddleware/userUpdate.js').actualizar_usuario;
 
-const eliminar_usuario = require('./usersEndPoints/userDeleteEndPoint.js').eliminar_usuario;
+const eliminar_usuario = require('./usersMiddleware/userDelete.js').eliminar_usuario;
 
-const filtrar_id_usuario = require('./usersEndPoints/userFilterIdEndPoint.js').filtrar_id_usuario;
+const filtrar_id_usuario = require('./usersMiddleware/userID.js').filtrar_id_usuario;
 
 //Creando los endpoints de los usuarios para poder realizar las peticiones
 
@@ -56,15 +66,15 @@ app.get('/filtrar_id_usuario/:id', (req, res) => filtrar_id_usuario(req, res, co
 
 //Requiriendo todos lo ficheros que permiten realizar consultas, modificaciones, actualizaciones y supresiones de los servicios
 
-const lista_servicios = require('./serviceEndPoints/servicesListEndPoint.js').lista_servicios;
+const lista_servicios = require('./servicesMiddleware/servicesList.js').lista_servicios;
 
-const agregar_servicio = require('./serviceEndPoints/servicesAddEndPoint.js').agregar_servicio;
+const agregar_servicio = require('./servicesMiddleware/servicesAdd.js').agregar_servicio;
 
-const actualizar_servicio = require('./serviceEndPoints/servicesUpdateEndPoint.js').actualizar_servicio;
+const actualizar_servicio = require('./servicesMiddleware/servicesUpdate.js').actualizar_servicio;
 
-const eliminar_servicio = require('./serviceEndPoints/servicesDeleteEndPoint.js').eliminar_servicio;
+const eliminar_servicio = require('./servicesMiddleware/servicesDelete.js').eliminar_servicio;
 
-const filtrar_id_servicio = require('./serviceEndPoints/servicesFilterIdEndPoint.js').filtrar_id_servicio;
+const filtrar_id_servicio = require('./servicesMiddleware/servicesID.js').filtrar_id_servicio;
 
 //Creando los endpoints de los servicios para poder realizar las peticiones
 
@@ -82,15 +92,15 @@ app.get('/filtrar_id_servicio/:id', (req, res) => filtrar_id_servicio(req, res, 
 
 //Requiriendo todos lo ficheros que permiten realizar consultas, modificaciones, actualizaciones y supresiones de los vehículos
 
-const lista_vehiculos = require('./vehicleEndPoints/vehicleListEndPoint.js').lista_vehiculos;
+const lista_vehiculos = require('./vehiclesMiddleware/vehiclesList.js').lista_vehiculos;
 
-const agregar_vehiculo = require('./vehicleEndPoints/vehicleAddEndPoint.js').agregar_vehiculo;
+const agregar_vehiculo = require('./vehiclesMiddleware/vehiclesAdd.js').agregar_vehiculo;
 
-const actualizar_vehiculo = require('./vehicleEndPoints/vehicleUpdateEndPoint.js').actualizar_vehiculo;
+const actualizar_vehiculo = require('./vehiclesMiddleware/vehiclesUpdate.js').actualizar_vehiculo;
 
-const eliminar_vehiculo = require('./vehicleEndPoints/vehicleDeleteEndPoint.js').eliminar_vehiculo;
+const eliminar_vehiculo = require('./vehiclesMiddleware/vehiclesDelete.js').eliminar_vehiculo;
 
-const filtrar_id_vehiculo = require('./vehicleEndPoints/vehicleFilterIdEndPoint.js').filtrar_id_vehiculo;
+const filtrar_id_vehiculo = require('./vehiclesMiddleware/vehiclesID.js').filtrar_id_vehiculo;
 
 //Creando los endpoints de los vehículos para poder realizar las peticiones
 

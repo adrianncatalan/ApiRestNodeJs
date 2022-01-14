@@ -1,7 +1,5 @@
-//Creamos un endpoint para actualizar usuarios a nuestra tabla registro_usuarios de nuestra base de datos
+//Creamos una función middleware para actualizar usuarios a nuestra tabla registro_usuarios de nuestra base de datos
 const actualizar_usuario = (req, res, connection) => {
-
-    //res.send('Actualizar usuario'); --> Código de prueba del funcionamiento del endpoint
 
     const { id } = req.params;
 

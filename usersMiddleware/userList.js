@@ -1,7 +1,5 @@
-//Creamos un endpoint y mostramos todos los usuarios registrados en la tabla de nuestra base de datos registro_usuarios
+//Creamos una función middleware y mostramos todos los usuarios registrados en la tabla de nuestra base de datos registro_usuarios
 const lista_usuarios = (req, res, connection) => {
-
-    //res.send('Lista de usuarios'); --> Código de prueba del funcionamiento del endpoint
 
     const sql = 'SELECT * FROM registro_usuarios';
 

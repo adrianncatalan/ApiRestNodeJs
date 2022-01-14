@@ -1,7 +1,6 @@
-//Creamos un endpoint para mostrar un usuario en particular filtrado por ID de nuestra tabla registro_usuarios de nuestra base de datos
+//Creamos una función middleware para mostrar un usuario en particular filtrado por ID de nuestra tabla registro_usuarios de nuestra base de datos
 const filtrar_id_usuario = (req, res, connection) => {
 
-    //res.send('Tomar usuario por ID'); --> Código de prueba del funcionamiento del endpoint
     const { id } = req.params;
 
     const sql = `SELECT * FROM registro_usuarios WHERE id_usuario = "${id}"`;

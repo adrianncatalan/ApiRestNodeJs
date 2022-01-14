@@ -1,7 +1,5 @@
-//Creamos un endpoint para agregar usuarios a nuestra tabla registro_usuarios en nuestra base de datos
+//Creamos una función middleware para agregar usuarios a nuestra tabla registro_usuarios en nuestra base de datos
 const agregar_usuario = (req, res, connection) => {
-
-    //res.send('Nuevo usuario'); --> Código de prueba del funcionamiento del endpoint
 
     const sql = 'INSERT INTO registro_usuarios SET ?';
 

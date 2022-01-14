@@ -26,9 +26,9 @@ function dataBaseConnection() {
         if (error) throw error;
 
         console.log('Servidor de base de datos en funcionamiento exitosamente.');
-        
+
     });
-    
+
     return connection;
 
 }
