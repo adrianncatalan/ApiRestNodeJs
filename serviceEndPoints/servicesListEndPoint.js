@@ -5,10 +5,10 @@ const connection = require('../dataBaseConnection/connection.js');
 connection.dataBase();
 
 //Creamos un endpoint y mostramos todos los usuarios registrados en la tabla de nuestra base de datos registro_usuarios
-app.get('/lista_usuarios', (req, res) => {
+app.get('/lista_servicios', (req, res) => {
 
-    //res.send('Lista de usuarios'); --> Código de prueba del funcionamiento del endpoint
-    const sql = 'SELECT * FROM registro_usuarios';
+    //res.send('Lista de servicios'); --> Código de prueba del funcionamiento del endpoint
+    const sql = 'SELECT * FROM registro_servicios';
 
     connection.query(sql, (error, results) => {
 

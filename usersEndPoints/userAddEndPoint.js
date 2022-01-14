@@ -13,36 +13,36 @@ app.post('/agregar_usuario', (req, res) => {
 
     const usuario_obj = {
 
-        id_usuario: req.body.id_usuario,
+        id_usuario: req.body.user.idUser,
 
-        nombre: req.body.nombre,
+        nombre: req.body.user.name,
 
-        apellido: req.body.apellido,
+        apellido: req.body.user.surname,
 
-        telefono: req.body.telefono,
+        telefono: req.body.user.phone,
 
-        email: req.body.email,
+        email: req.body.user.email,
 
-        clave: req.body.clave,
+        clave: req.body.user.password,
 
-        contacto_emergencia: req.body.contacto_emergencia,
+        contacto_emergencia: req.body.user.emergencyContactPhone,
 
-        fecha_alta: req.body.fecha_alta,
+        fecha_alta: req.body.user.date,
 
-        cantidad_vehiculos: req.body.cantidad_vehiculos,
+        cantidad_vehiculos: req.body.user.numbersVehicles,
 
-        departamento: req.body.departamento,
+        departamento: req.body.user.department,
 
-        cargo: req.body.cargo,
+        cargo: req.body.user.position,
 
-        administrador: req.body.administrador
+        administrador: req.body.user.admin
     };
 
     connection.query(sql, usuario_obj, error => {
 
         if (error) throw error;
 
-        res.send('Usuario creado.');
+        res.send('Usuario creado exitosamente.');
 
     });
 

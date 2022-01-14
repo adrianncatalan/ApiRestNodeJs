@@ -11,15 +11,15 @@ app.put('/actualizar_usuario/:id', (req, res) => {
 
     const { id } = req.params;
 
-    const { nombre, apellido } = req.body;
+    const { telefono, email, contacto_emergencia } = req.body;
 
-    const sql = `UPDATE registro_usuarios SET nombre = "${nombre}", apellido= "${apellido}" WHERE id_usuario = "${id}"`;
+    const sql = `UPDATE registro_usuarios SET telefono = '${telefono}', email= '${email}', contacto_emergencia= '${contacto_emergencia} WHERE id_usuario = "${id}"`;
 
     connection.query(sql, error => {
 
         if (error) throw error;
 
-        res.send('Usuario actualizado.')
+        res.send('Usuario actualizado exitosamente.')
 
     });
 

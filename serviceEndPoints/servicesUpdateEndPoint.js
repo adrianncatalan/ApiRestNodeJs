@@ -7,19 +7,19 @@ connection.dataBase();
 //Creamos un endpoint para actualizar usuarios a nuestra tabla registro_usuarios de nuestra base de datos
 app.put('/actualizar_usuario/:id', (req, res) => {
 
-    //res.send('Actualizar usuario'); --> Código de prueba del funcionamiento del endpoint
+    //res.send('Actualizar servicio'); --> Código de prueba del funcionamiento del endpoint
 
     const { id } = req.params;
 
-    const { nombre, apellido } = req.body;
+    const { tipo_servicio, descripcion } = req.body;
 
-    const sql = `UPDATE registro_usuarios SET nombre = "${nombre}", apellido= "${apellido}" WHERE id_usuario = "${id}"`;
+    const sql = `UPDATE registro_servicios SET nombre = "${tipo_servicio}", apellido= "${descripcion}" WHERE id_servicio = "${id}"`;
 
     connection.query(sql, error => {
 
         if (error) throw error;
 
-        res.send('Usuario actualizado.')
+        res.send('Servicio actualizado exitosamente.')
 
     });
 

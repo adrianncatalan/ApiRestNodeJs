@@ -5,12 +5,12 @@ const connection = require('../dataBaseConnection/connection.js');
 connection.dataBase();
 
 //Creamos un endpoint para mostrar un usuario en particular filtrado por ID de nuestra tabla registro_usuarios de nuestra base de datos
-app.get('/registro_usuarios/:id', (req, res) => {
+app.get('/registro_servicio/:id', (req, res) => {
 
-    //res.send('Tomar usuario por ID'); --> Código de prueba del funcionamiento del endpoint
+    //res.send('Tomar servicio por ID'); --> Código de prueba del funcionamiento del endpoint
     const { id } = req.params;
 
-    const sql = `SELECT * FROM registro_usuarios WHERE id_Usuario = "${id}"`;
+    const sql = `SELECT * FROM registro_servicios WHERE id_Usuario = "${id}"`;
 
     connection.query(sql, (error, result) => {
 

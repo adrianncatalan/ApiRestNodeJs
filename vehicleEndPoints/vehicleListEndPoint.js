@@ -5,10 +5,10 @@ const connection = require('../dataBaseConnection/connection.js');
 connection.dataBase();
 
 //Creamos un endpoint y mostramos todos los usuarios registrados en la tabla de nuestra base de datos registro_usuarios
-app.get('/lista_usuarios', (req, res) => {
+app.get('/lista_vehiculos', (req, res) => {
 
     //res.send('Lista de usuarios'); --> Código de prueba del funcionamiento del endpoint
-    const sql = 'SELECT * FROM registro_usuarios';
+    const sql = 'SELECT * FROM registro_vehiculos';
 
     connection.query(sql, (error, results) => {
 
@@ -20,7 +20,7 @@ app.get('/lista_usuarios', (req, res) => {
 
         } else {
 
-            res.send('No hay registros de usuarios en la base de datos.')
+            res.send('No hay registros de vehiculos en la base de datos.')
         }
 
     });

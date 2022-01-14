@@ -17,7 +17,7 @@ app.delete('/eliminar_usuario/:id', (req, res) => {
 
         if (error) throw error;
 
-        res.send('Usuario eliminado.')
+        res.send('Usuario eliminado exitosamente.')
 
     });
     

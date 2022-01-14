@@ -7,21 +7,21 @@ connection.dataBase();
 //Creamos un endpoint para agregar usuarios a nuestra tabla registro_usuarios en nuestra base de datos
 app.post('/agregar_vehiculo', (req, res) => {
 
-    //res.send('Nuevo usuario'); --> Código de prueba del funcionamiento del endpoint
+    //res.send('Nuevo vehículo'); --> Código de prueba del funcionamiento del endpoint
 
     const sql = 'insert into registro_vehiculos set ?';
 
     const vehiculo_obj = {
 
-        id_usuario: req.body.id_usuario,
+        id_usuario: req.body.vehicle.idUser,
 
-        marca: req.body.marca,
+        marca: req.body.vehicle.brand,
 
-        modelo: req.body.modelo,
+        modelo: req.body.vehicle.model,
 
-        placa: req.body.placa,
+        placa: req.body.vehicle.enrollment,
 
-        fecha_alta: req.body.fecha_alta,
+        fecha_alta: req.body.vehicle.date,
 
     };
 
@@ -29,7 +29,7 @@ app.post('/agregar_vehiculo', (req, res) => {
 
         if (error) throw error;
 
-        res.send('Usuario creado.');
+        res.send('Vehículo creado exitosamente.');
 
     });
 
