@@ -1,9 +1,9 @@
-//Creamos una función middleware para mostrar un servicio en particular filtrado por ID de nuestra tabla registro_servicios de nuestra base de datos
-const filtrar_id_servicio = (req, res, connection) => {
+//Creamos una función middleware para mostrar la información vehícular y servicios filtrado por ID de usuario de nuestra tabla registro_vehiculos y registro_servicios 
+const filtrar_id_vehiculo_servicio = (req, res, connection) => {
 
-    const { id } = req.params;
+    const { id, id_servicio } = req.params;
 
-    const sql = `SELECT * FROM registro_servicios WHERE id_usuario = "${id}"`;
+    const sql = `SELECT * FROM registro_vehiculos regVeh, registro_servicios regServ WHERE regVeh.id_usuario = '${id}' AND regServ.id_servicio = ${id_servicio}`;
 
     connection.query(sql, (error, result) => {
 
@@ -22,5 +22,7 @@ const filtrar_id_servicio = (req, res, connection) => {
 
 }
 
-//Exportamos el bloque de código que permite mostrar un servicio filtrado por ID
-module.exports.filtrar_id_servicio = filtrar_id_servicio;
+//Exportamos el bloque de código que permite mostrar la información vehícular y servicio filtrado por ID de usuario
+module.exports.filtrar_id_vehiculo_servicio = filtrar_id_vehiculo_servicio;
+
+

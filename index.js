@@ -123,3 +123,14 @@ const filtrar_id_usuario_vehiculo = require('./usersVehiclesMiddleware/userVehic
 //Creando el endpoint para mostrar la información consultada
 
 app.get('/filtrar_id_usuario_vehiculo/:id', (req, res) => filtrar_id_usuario_vehiculo(req, res, connection));
+
+//-----------------------------------------------------Comienzo de los endpoints vehicles - services------------------------------------------------------------
+
+//Requiriendo el fichero que permite mostrar las información vehicular y su lista de servicios filtrado por ID de usuario
+
+const filtrar_id_vehiculo_servicio = require('./vehiclesServicesMiddleware/vehiclesServicesID.js').filtrar_id_vehiculo_servicio;
+
+//Creando el endpoint para mostrar la información consultada
+
+app.get('/filtrar_id_vehiculo_servicio/:id/:id_servicio', (req, res) => filtrar_id_vehiculo_servicio(req, res, connection));
+

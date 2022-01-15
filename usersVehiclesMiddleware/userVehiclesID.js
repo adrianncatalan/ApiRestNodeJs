@@ -3,11 +3,7 @@ const filtrar_id_usuario_vehiculo = (req, res, connection) => {
 
     const { id } = req.params;
 
-    // const sql = `SELECT * FROM registro_usuarios users,  FULL JOIN registro_vehiculos vehiculos ON "users.id_usuario" && "vehiculos.id_usuario" = '${id}'`;
-
-    // const sql = `SELECT * FROM registro_usuarios WHERE "registro_usuarios.id_usuario" = ${id}`;
-
-    const sql = `SELECT * FROM registro_usuarios, registro_vehiculos WHERE registro_usuarios.id_usuario  AND registro_vehiculos.id_usuario = "${id}"`;
+    const sql = `SELECT * FROM registro_vehiculos regVeh, registro_servicios regServ WHERE regUser.id_usuario = '${id}'`;
 
     connection.query(sql, (error, result) => {
 
