@@ -133,4 +133,3 @@ const filtrar_id_vehiculo_servicio = require('./vehiclesServicesMiddleware/vehic
 //Creando el endpoint para mostrar la información consultada
 
 app.get('/filtrar_id_vehiculo_servicio/:id/:id_servicio', (req, res) => filtrar_id_vehiculo_servicio(req, res, connection));
-

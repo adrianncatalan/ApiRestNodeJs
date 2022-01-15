@@ -24,5 +24,3 @@ const filtrar_id_vehiculo_servicio = (req, res, connection) => {
 
 //Exportamos el bloque de código que permite mostrar la información vehícular y servicio filtrado por ID de usuario
 module.exports.filtrar_id_vehiculo_servicio = filtrar_id_vehiculo_servicio;
-
-
