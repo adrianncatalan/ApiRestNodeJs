@@ -1,3 +1,8 @@
+//Conexion bbdd
+const connection = require('./databaseConnection/connection.js').dataBaseConnection();
+
+
+
 //Creamos una constante para hacer un require a la dependencia express, nos permite conectarnos a la base de datos
 const express = require('express');
 
@@ -7,10 +12,12 @@ const app = express();
 //Nos permite registrar las peticiones que se realizan al servidor
 const morgan = require('morgan');
 
-const connection = require('./databaseConnection/connection.js').dataBaseConnection();
 
 //Creamos una constante para hacer un require a la dependencia Body-Parser, nos permite recibir información del front o de Postman
 const bodyParser = require('body-parser');
+
+//
+const cors = require('../ApiRestNodeJs/node_modules/cors');
 
 //Usamos nuestra conexión a la base de datos y al mismo tiempo usamos Body-Parser para ejecutar futuras consultas y nos devuelvan las respuestas en formato Json
 app.use(bodyParser.json());
@@ -26,6 +33,18 @@ app.listen(PORT, () => {
 
 });
 
+
+
+//Middleware
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(cors());
+
+
+
+
 //-----------------------------------------------------Endpoint de bienvenida-------------------------------------------------------------------------
 
 // Requiriendo el fichero de bienvenida
@@ -40,6 +59,8 @@ app.get('/', (req, res) => welcome(req, res));
 
 //Requiriendo todos lo ficheros que permiten realizar consultas, modificaciones, actualizaciones y supresiones de los users
 
+const data_user = require('./usersMiddleware/userData.js').data_user;
+
 const lista_usuarios = require('./usersMiddleware/userList.js').lista_usuarios;
 
 const agregar_usuario = require('./usersMiddleware/userAdd.js').agregar_usuario;
@@ -51,6 +72,8 @@ const eliminar_usuario = require('./usersMiddleware/userDelete.js').eliminar_usu
 const filtrar_id_usuario = require('./usersMiddleware/userID.js').filtrar_id_usuario;
 
 //Creando los endpoints de los usuarios para poder realizar las peticiones
+
+app.get('/data_user/:id', (req, res) => data_user(req, res, connection));
 
 app.get('/lista_usuarios', (req, res) => lista_usuarios(req, res, connection));
 
