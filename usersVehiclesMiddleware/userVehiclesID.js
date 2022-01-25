@@ -3,7 +3,7 @@ const filtrar_id_usuario_vehiculo = (req, res, connection) => {
 
     const { id } = req.params;
 
-    const sql = `SELECT * FROM registro_vehiculos regVeh, registro_servicios regServ WHERE regUser.id_usuario = '${id}'`;
+    const sql = `SELECT * FROM registro_usuarios regUser, registro_vehiculos regVeh WHERE regUser.id_usuario = '${id}' AND regVeh.id_usuario = '${id}'`;
 
     connection.query(sql, (error, result) => {
 
