@@ -1,4 +1,4 @@
-//Creamos una función middleware paramostrar los datos del usuario según ID
+//Creamos una función middleware para mostrar los datos del usuario según ID
 const data_user = (req, res, connection) => {
 
     const { id } = req.params;

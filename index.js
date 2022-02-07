@@ -1,8 +1,6 @@
 //Conexion bbdd
 const connection = require('./databaseConnection/connection.js').dataBaseConnection();
 
-
-
 //Creamos una constante para hacer un require a la dependencia express, nos permite conectarnos a la base de datos
 const express = require('express');
 
@@ -11,7 +9,6 @@ const app = express();
 
 //Nos permite registrar las peticiones que se realizan al servidor
 const morgan = require('morgan');
-
 
 //Creamos una constante para hacer un require a la dependencia Body-Parser, nos permite recibir información del front o de Postman
 const bodyParser = require('body-parser');
@@ -33,17 +30,12 @@ app.listen(PORT, () => {
 
 });
 
-
-
 //Middleware
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors());
-
-
-
 
 //-----------------------------------------------------Endpoint de bienvenida-------------------------------------------------------------------------
 
