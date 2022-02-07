@@ -39,8 +39,6 @@ window.addEventListener('load', () => {
 
                 }
 
-                estilosBtnIdUser = window.getComputedStyle(btnIdUser);
-
                 btnIdUser.value = "Cerrar lista de usuarios";
 
             });

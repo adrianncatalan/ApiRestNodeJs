@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar usuario</title>
+    <link rel="stylesheet" href="/css/commons.css">
+    <script src="/js/userAdd.js"></script>
+</head>
+
+<body>
+    <div class="contenedor_tittle">
+        <h1 class="tittle">Agregar usuarios</h1>
+    </div>
+
+    <nav>
+        <ul>
+            <li>
+                <a href="/html/usersList.html">Lista de usuarios</a>
+            </li>
+            <li>
+                <a href="/html/userId.html">Usuario ID</a>
+            </li>
+            <li>
+                <a href="/html/userAdd.html">Agregar usuario</a>
+            </li>
+            <li>
+                <a href="/html/userUpdate.html">Actualizar usuario</a>
+            </li>
+            <li>
+                <a href="/html/userDelete.html">Eliminar usuario</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="contenedor_padre">
+
+        <div id="dataUserId" class="form">
+            <div class="form_header">
+                <h1 class="form_tittle">Ingrese los datos para agregar al usuario</h1>
+            </div>
+
+            <label class="form_label">ID de usuario:</label>
+            <input id="idUser" maxlength="20" type="text" name="id_usuario" class="form_input"
+                placeholder="Escriba su ID de usuario" required>
+
+            <label class="form_label">Nombre:</label>
+            <input id="nombre" maxlength="20" type="text" name="nombre" class="form_input" placeholder="Escriba su nombre" required>
+
+            <label class="form_label">Apellido:</label>
+            <input id="apellido" maxlength="40" type="text" name="apellido" class="form_input" placeholder="Escriba su apellido"
+                required>
+
+            <label class="form_label">Teléfono:</label>
+            <input id="telefono" maxlength="15" type="tel" name="telefono" class="form_input" placeholder="Escriba su teléfono"
+                required>
+
+            <label class="form_label">Email:</label>
+            <input id="email" maxlength="40" type="email" name="email" class="form_input" placeholder="Escriba su email" required>
+
+            <label class="form_label">Clave:</label>
+            <input id="clave" maxlength="200" type="password" name="clave" class="form_input" placeholder="Escriba su clave"
+                required>
+
+            <label class="form_label">Contacto de emergencia:</label>
+            <input id="contEmer" maxlength="15" type="tel" name="Contacto_emergencia" class="form_input"
+                placeholder="Escriba su teléfono de contacto de emergencia" required>
+
+            <label class="form_label">Fecha de alta:</label>
+            <input id="date" type="date" name="fecha_alta" class="form_input" required>
+
+            <label class="form_label">Cantidad de vehículos:</label>
+            <input id="cantVeh" type="number" name="cantidad_vehiculos" class="form_input"
+                placeholder="Escriba su cantidad de vehículos" required>
+
+            <label class="form_label">Departamento:</label>
+            <input id="depa" maxlength="30" type="text" name="departamento" class="form_input"
+                placeholder="Escriba el departamento al que pertenece" required>
+
+            <label class="form_label">Cargo:</label>
+            <input id="cargo" maxlength="20" type="text" name="cargo" class="form_input" placeholder="Escriba su cargo laboral"
+                required>
+
+            <label class="form_label">Administrador:</label>
+            <input id="admin" maxlength="2" type="text" name="administrador" class="form_input"
+                placeholder="Escriba si es administrador con un si o no" required>
+
+            <input type="submit" class="button_submit" value="Agregar">
+        </div>
+
+        <table id="table">
+            <thead>
+                <tr>
+                    <th>ID Usuario</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Teléfono</th>
+                    <th>Email</th>
+                    <th>Contacto de emergencia</th>
+                    <th>Fecha de alta</th>
+                    <th>Nº de vehiculos</th>
+                    <th>Departamento</th>
+                    <th>Cargo</th>
+                    <th>Administrador</th>
+                </tr>
+            </thead>
+            <tbody id="tBody">
+            </tbody>
+        </table>
+
+        <div id="iFrame">
+            <h1>Ubicación del taller</h1>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3199.2998817176704!2d-4.459611435436912!3d36.6913311!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd72f9c45623d2c3%3A0x7a634bd28c0cf953!2sMEDAC%20Nova%20-%20Centro%20Tecnol%C3%B3gico%20de%20FP!5e0!3m2!1ses!2ses!4v1644236883731!5m2!1ses!2ses"
+                width="600" height="450" style="border:0;" loading="lazy">
+            </iframe>
+        </div>
+    </div>
+    </div>
+    <div id="iframe">
+
+        <footer>
+            <img class="img1" src="img/LogoMachineBreak.png  " alt="">
+            <img class="img2" src="../../img/LogoMachineBreak.png" alt="">
+            <h2>Technical Support</h1>
+                <div class="parrafos">
+                    <a href="">Teléfono: (+34) 555 55 55</a>
+                    <a href="">Email: support@machinebreak.com</a>
+                    <a href="">Terms of service</a>
+                    <a href="">Privacy policy</a>
+                    <p>© 2021 Todos los derechos reservados</p>
+                </div>
+        </footer>
+
+</body>
+
+</html>
