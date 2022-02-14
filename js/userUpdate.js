@@ -3,34 +3,17 @@ window.addEventListener("load", () => {
 
   btnAdd.addEventListener("click", () => {
     const id_usuario = document.getElementById("idUser");
-    const nombre = document.getElementById("nombre");
-    const apellido = document.getElementById("apellido");
     const telefono = document.getElementById("telefono");
     const email = document.getElementById("email");
-    const clave = document.getElementById("clave");
     const contacto_emergencia = document.getElementById("contEmer");
-    const cantidad_vehiculos = document.getElementById("cantVeh");
-    const fecha_alta = document.getElementById("date");
-    const departamento = document.getElementById("depa");
-    const cargo = document.getElementById("cargo");
-    const administrador = document.getElementById("admin");
 
-    fetch("http://10.192.240.4:3050/agregar_usuario", {
-      method: "POST",
+    fetch(`http://10.192.240.4:3050/actualizar_usuario/${id_usuario.value}`, {
+      method: "PUT",
       mode: "cors",
       body: JSON.stringify({
-        id_usuario: id_usuario.value,
-        nombre: nombre.value,
-        apellido: apellido.value,
         telefono: telefono.value,
         email: email.value,
-        clave: clave.value,
         contacto_emergencia: contacto_emergencia.value,
-        fecha_alta: fecha_alta.value,
-        cantidad_vehiculos: cantidad_vehiculos.value,
-        departamento: departamento.value,
-        cargo: cargo.value,
-        administrador: administrador.value,
       }),
       headers: {
         Accept: "application/json",
@@ -47,11 +30,10 @@ window.addEventListener("load", () => {
       .then((res) => res.json())
       // .catch((error) => console.error("Error:", error))
       .catch((error) => {
-        
         let fragment = document.createDocumentFragment();
         let text = document.createElement("h2");
-        text.textContent = `Error al insertar usuario. El usuario existe o los datos ingresados son erroneos.`;
-        text.className = "textAddError";
+        text.textContent = `Error al modificar usuario. Los datos ingresados son erroneos.`;
+        text.className = "textUpdateError";
         fragment.append(text);
         document.getElementById("mensaje").append(fragment);
         window.location.reload();
@@ -61,23 +43,14 @@ window.addEventListener("load", () => {
       .then((response) => {
         let fragment = document.createDocumentFragment();
         let text = document.createElement("h2");
-        text.textContent = `Usuario creado exitosamente con ID ${id_usuario.value}`;
-        text.className = "textAddConfirmar";
+        text.textContent = `Usuario modificado exitosamente con ID ${id_usuario.value}`;
+        text.className = "textUpdateConfirmar";
         fragment.append(text);
         document.getElementById("mensaje").append(fragment);
-
         id_usuario.value = "";
-        nombre.value = "";
-        apellido.value = "";
         telefono.value = "";
         email.value = "";
-        clave.value = "";
         contacto_emergencia.value = "";
-        cantidad_vehiculos.value = "";
-        fecha_alta.value = "";
-        departamento.value = "";
-        cargo.value = "";
-        administrador.value = "";
       });
   });
 });

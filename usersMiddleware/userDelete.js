@@ -3,13 +3,17 @@ const eliminar_usuario = (req, res, connection) => {
 
     const { id } = req.params;
 
+    const result = req.body;
+
     const sql = `DELETE FROM registro_usuarios WHERE id_usuario = "${id}"`;
 
     connection.query(sql, error => {
 
         if (error) throw error;
 
-        res.send('Usuario eliminado exitosamente.')
+        // res.send('Usuario eliminado exitosamente.')
+
+        res.json(result);
 
     });
 

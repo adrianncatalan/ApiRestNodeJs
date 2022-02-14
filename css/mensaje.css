@@ -1,0 +1,51 @@
+#mensaje {
+  margin-top: 2em;
+}
+
+.textAddConfirmar {
+  color: #2f2f2f;
+  font-family: sans-serif;
+  padding: 1em;
+  background-color: greenyellow;
+  text-align: center;
+}
+
+.textAddError {
+  color: white;
+  font-family: sans-serif;
+  padding: 1em;
+  background-color: crimson;
+  text-align: center;
+}
+
+.textUpdateConfirmar {
+  color: #2f2f2f;
+  font-family: sans-serif;
+  padding: 1em;
+  background-color: greenyellow;
+  text-align: center;
+}
+
+.textUpdateError {
+  color: white;
+  font-family: sans-serif;
+  padding: 1em;
+  background-color: crimson;
+  text-align: center;
+}
+
+.textDeleteConfirmar {
+  color: #2f2f2f;
+  font-family: sans-serif;
+  padding: 1em;
+  background-color: greenyellow;
+  text-align: center;
+}
+
+.textDeleteError {
+  color: white;
+  font-family: sans-serif;
+  padding: 1em;
+  background-color: crimson;
+  text-align: center;
+}

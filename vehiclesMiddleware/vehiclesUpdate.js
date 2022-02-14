@@ -1,5 +1,5 @@
 //Creamos una función middleware para actualizar los vehículos de nuestra tabla registro_vehiculos de nuestra base de datos
-const actualizar_usuarios = (req, res, connection) => {
+const actualizar_vehiculo = (req, res, connection) => {
 
     const { id } = req.params;
 
@@ -18,4 +18,4 @@ const actualizar_usuarios = (req, res, connection) => {
 }
 
 //Exportamos el bloque de código que permite actualizar los vehículos de la base de datos
-module.exports.actualizar_usuarios = actualizar_usuarios;
+module.exports.actualizar_vehiculo = actualizar_vehiculo;

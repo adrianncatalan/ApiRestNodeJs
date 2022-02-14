@@ -4,7 +4,7 @@ window.addEventListener('load', () => {
 
     btnIdUser.addEventListener('click', () => {
 
-        fetch('http://192.168.56.1:3050/lista_usuarios')
+        fetch('http://10.192.240.4:3050/lista_usuarios')
 
             .then(response => response.ok ? Promise.resolve(response) : Promise.reject(response))
 

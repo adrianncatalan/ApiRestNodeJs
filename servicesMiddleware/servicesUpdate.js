@@ -1,5 +1,5 @@
 //Creamos una función middleware para actualizar un servicio de nuestra tabla registro_servicios de nuestra base de datos
-const actualizar_usuario = (req, res, connection) => {
+const actualizar_servicio = (req, res, connection) => {
 
     const { id } = req.params;
 
@@ -18,4 +18,4 @@ const actualizar_usuario = (req, res, connection) => {
 }
 
 //Exportamos el bloque de código que permite actualizar los servicios de la base de datos
-module.exports.actualizar_usuario = actualizar_usuario;
+module.exports.actualizar_servicio = actualizar_servicio;

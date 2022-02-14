@@ -1,44 +1,43 @@
 //Creamos una función middleware para agregar usuarios a nuestra tabla registro_usuarios en nuestra base de datos
 const agregar_usuario = (req, res, connection) => {
+  const sql = "INSERT INTO registro_usuarios SET ?";
 
-    const sql = 'INSERT INTO registro_usuarios SET ?';
+  const usuario_obj = {
+    id_usuario: req.body.id_usuario,
 
-    const usuario_obj = {
+    nombre: req.body.nombre,
 
-        id_usuario: req.body.id_usuario,
+    apellido: req.body.apellido,
 
-        nombre: req.body.nombre,
+    telefono: req.body.telefono,
 
-        apellido: req.body.apellido,
+    email: req.body.email,
 
-        telefono: req.body.telefono,
+    clave: req.body.clave,
 
-        email: req.body.email,
+    contacto_emergencia: req.body.contacto_emergencia,
 
-        clave: req.body.clave,
+    fecha_alta: req.body.fecha_alta,
 
-        contacto_emergencia: req.body.contacto_emergencia,
+    cantidad_vehiculos: req.body.cantidad_vehiculos,
 
-        fecha_alta: req.body.fecha_alta,
+    departamento: req.body.departamento,
 
-        cantidad_vehiculos: req.body.cantidad_vehiculos,
+    cargo: req.body.cargo,
 
-        departamento: req.body.departamento,
+    administrador: req.body.administrador,
+  };
 
-        cargo: req.body.cargo,
+  const result = usuario_obj;
 
-        administrador: req.body.administrador
-    };
+  connection.query(sql, usuario_obj, (error) => {
+    if (error) throw error;
 
-    connection.query(sql, usuario_obj, error => {
+    // res.send('Usuario creado exitosamente.');
 
-        if (error) throw error;
-
-        res.send('Usuario creado exitosamente.');
-
-    });
-
-}
+    res.json(result);
+  });
+};
 
 //Exportamos el bloque de código que permite agregar al usuario
 module.exports.agregar_usuario = agregar_usuario;
