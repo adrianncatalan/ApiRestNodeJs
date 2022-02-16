@@ -5,8 +5,8 @@ window.addEventListener('load', () => {
     const idUser = document.getElementsByClassName('form_input')[0];
 
     btnIdUser.addEventListener('click', () => {
-// 10.192.240.4
-        fetch('http://192.168.1.161:3050/filtrar_id_usuario/' + idUser.value)
+// 10.192.240.4 192.168.1.161
+        fetch('http://10.192.240.4:3050/filtrar_id_usuario/' + idUser.value)
 
             .then(response => response.ok ? Promise.resolve(response) : Promise.reject(response))
 

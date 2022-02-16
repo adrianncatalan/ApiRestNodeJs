@@ -3,8 +3,8 @@ window.addEventListener("load", () => {
 
   btnAdd.addEventListener("click", () => {
     const id_usuario = document.getElementById("idUser");
-
-    fetch(`http://10.192.240.4:3050/eliminar_usuario/${id_usuario.value}`, {
+// 10.192.240.4 192.168.1.161
+    fetch(`http://10.192.240.4:3050/eliminar_vehiculo/${id_usuario.value}`, {
       method: "DELETE",
       mode: "cors",
       body: JSON.stringify(),
@@ -25,7 +25,7 @@ window.addEventListener("load", () => {
       .catch((error) => {
         let fragment = document.createDocumentFragment();
         let text = document.createElement("h2");
-        text.textContent = `Error al eliminar el usuario. Los datos ingresados son erroneos.`;
+        text.textContent = `Error al eliminar el vehículo. Los datos ingresados son erroneos.`;
         text.className = "textDeleteError";
         fragment.append(text);
         document.getElementById("mensaje").append(fragment);
@@ -36,7 +36,7 @@ window.addEventListener("load", () => {
       .then((response) => {
         let fragment = document.createDocumentFragment();
         let text = document.createElement("h2");
-        text.textContent = `Usuario elimiando exitosamente con ID ${id_usuario.value}`;
+        text.textContent = `Vehículo eliminado exitosamente con ID ${id_usuario.value}`;
         text.className = "textDeleteConfirmar";
         fragment.append(text);
         document.getElementById("mensaje").append(fragment);

@@ -9,12 +9,17 @@
     <link rel="stylesheet" href="/css/commons.css">
     <script src="/js/vehicles/vehicleId.js"></script>
     <link rel="stylesheet" href="/css/vehicles.css">
+    <link rel="stylesheet" href="/css/vover.css">
 
 </head>
 
 <body>
     <div class="contenedor_tittle">
         <h1 class="tittle">Información de vehículo por ID</h1>
+    </div>
+
+    <div id="volver">
+        <a href="/html/principal.html">Vuelve al menú principal</a>
     </div>
 
     <nav>
@@ -42,7 +47,7 @@
 
         <div id="dataUserId" class="form">
             <div class="form_header">
-                <h1 class="form_tittle">Consultar información de usuario filtrada por ID</h1>
+                <h1 class="form_tittle">Consultar información de vehículo filtrada por ID de usuario</h1>
             </div>
             <label for="id_usuario" class="form_label">ID de usuario:</label>
             <input type="text" name="id_usuario" class="form_input" placeholder="Escriba su ID de usuario" value=""
@@ -54,16 +59,10 @@
             <thead>
                 <tr>
                     <th>ID Usuario</th>
-                    <th>Nombre</th>
-                    <th>Apellido</th>
-                    <th>Teléfono</th>
-                    <th>Email</th>
-                    <th>Contacto de emergencia</th>
+                    <th>Marca</th>
+                    <th>Modelo</th>
+                    <th>Placa</th>
                     <th>Fecha de alta</th>
-                    <th>Nº de vehiculos</th>
-                    <th>Departamento</th>
-                    <th>Cargo</th>
-                    <th>Administrador</th>
                 </tr>
             </thead>
             <tbody id="tBody">

@@ -3,8 +3,8 @@ window.addEventListener("load", () => {
 
   btnAdd.addEventListener("click", () => {
     const id_usuario = document.getElementById("idUser");
-// 10.192.240.4
-    fetch(`http://192.168.1.161:3050/eliminar_usuario/${id_usuario.value}`, {
+// 10.192.240.4 192.168.1.161
+    fetch(`http://10.192.240.4:3050/eliminar_usuario/${id_usuario.value}`, {
       method: "DELETE",
       mode: "cors",
       body: JSON.stringify(),

@@ -9,11 +9,16 @@
     <link rel="stylesheet" href="/css/commons.css">
     <link rel="stylesheet" href="/css/vehicles.css">
     <script src="/js/vehicles/vehicleAdd.js"></script>
+    <link rel="stylesheet" href="/css/vover.css">
 </head>
 
 <body>
     <div class="contenedor_tittle">
         <h1 class="tittle">Agregar vehículo</h1>
+    </div>
+
+    <div id="volver">
+        <a href="/html/principal.html">Vuelve al menú principal</a>
     </div>
     
     <nav>
@@ -41,53 +46,26 @@
 
         <div id="dataUserId" class="form">
             <div class="form_header">
-                <h1 class="form_tittle">Ingrese los datos para agregar al usuario</h1>
+                <h1 class="form_tittle">Ingrese los datos para agregar el vehículo</h1>
             </div>
 
-            <label class="form_label">ID de usuario:</label>
-            <input id="idUser" maxlength="20" type="text" name="id_usuario" class="form_input"
-                placeholder="Escriba su ID de usuario" required>
+            <label class="form_label">ID de vehículo:</label>
+            <input id="id_usuario" maxlength="20" type="text" name="id_usuario" class="form_input"
+                placeholder="Escriba el ID del vehículo" required>
 
-            <label class="form_label">Nombre:</label>
-            <input id="nombre" maxlength="20" type="text" name="nombre" class="form_input" placeholder="Escriba su nombre" required>
+            <label class="form_label">Marca:</label>
+            <input id="marca" maxlength="20" type="text" name="nombre" class="form_input" placeholder="Escriba la marca del coche" required>
 
-            <label class="form_label">Apellido:</label>
-            <input id="apellido" maxlength="40" type="text" name="apellido" class="form_input" placeholder="Escriba su apellido"
+            <label class="form_label">Modelo:</label>
+            <input id="modelo" maxlength="40" type="text" name="apellido" class="form_input" placeholder="Escriba el modelo del coche"
                 required>
 
-            <label class="form_label">Teléfono:</label>
-            <input id="telefono" maxlength="15" type="tel" name="telefono" class="form_input" placeholder="Escriba su teléfono"
+            <label class="form_label">Placa:</label>
+            <input id="placa" maxlength="15" type="text" name="telefono" class="form_input" placeholder="Escriba la placa del coche"
                 required>
-
-            <label class="form_label">Email:</label>
-            <input id="email" maxlength="40" type="email" name="email" class="form_input" placeholder="Escriba su email" required>
-
-            <label class="form_label">Clave:</label>
-            <input id="clave" maxlength="200" type="password" name="clave" class="form_input" placeholder="Escriba su clave"
-                required>
-
-            <label class="form_label">Contacto de emergencia:</label>
-            <input id="contEmer" maxlength="15" type="tel" name="contacto_emergencia" class="form_input"
-                placeholder="Escriba su teléfono de contacto de emergencia" required>
 
             <label class="form_label">Fecha de alta:</label>
             <input id="date" type="date" name="fecha_alta" class="form_input" required>
-
-            <label class="form_label">Cantidad de vehículos:</label>
-            <input id="cantVeh" type="number" name="cantidad_vehiculos" class="form_input"
-                placeholder="Escriba su cantidad de vehículos" required>
-
-            <label class="form_label">Departamento:</label>
-            <input id="depa" maxlength="30" type="text" name="departamento" class="form_input"
-                placeholder="Escriba el departamento al que pertenece" required>
-
-            <label class="form_label">Cargo:</label>
-            <input id="cargo" maxlength="20" type="text" name="cargo" class="form_input" placeholder="Escriba su cargo laboral"
-                required>
-
-            <label class="form_label">Administrador:</label>
-            <input id="admin" maxlength="2" type="text" name="administrador" class="form_input"
-                placeholder="Escriba si es administrador con un si o no" required>
 
             <input type="submit" id="btnAdd" class="button_submit" value="Agregar">
         </div>

@@ -2,18 +2,18 @@ window.addEventListener("load", () => {
   const btnAdd = document.getElementById("btnAdd");
 
   btnAdd.addEventListener("click", () => {
-    const id_usuario = document.getElementById("idUser");
-    const telefono = document.getElementById("telefono");
-    const email = document.getElementById("email");
-    const contacto_emergencia = document.getElementById("contEmer");
-
-    fetch(`http://10.192.240.4:3050/actualizar_usuario/${id_usuario.value}`, {
+    // const id_usuario = document.getElementById("idUser");
+    const placa = document.getElementById("placa");
+    const marca = document.getElementById("marca");
+    const modelo = document.getElementById("modelo");
+    // 10.192.240.4 192.168.1.161
+    fetch(`http://10.192.240.4:3050/actualizar_vehiculo/${placa.value}`, {
       method: "PUT",
       mode: "cors",
       body: JSON.stringify({
-        telefono: telefono.value,
-        email: email.value,
-        contacto_emergencia: contacto_emergencia.value,
+        placa: placa.value,
+        marca: marca.value,
+        modelo: modelo.value,
       }),
       headers: {
         Accept: "application/json",
@@ -32,7 +32,7 @@ window.addEventListener("load", () => {
       .catch((error) => {
         let fragment = document.createDocumentFragment();
         let text = document.createElement("h2");
-        text.textContent = `Error al modificar usuario. Los datos ingresados son erroneos.`;
+        text.textContent = `Error al modificar el vehículo. Los datos ingresados son erroneos.`;
         text.className = "textUpdateError";
         fragment.append(text);
         document.getElementById("mensaje").append(fragment);
@@ -43,14 +43,14 @@ window.addEventListener("load", () => {
       .then((response) => {
         let fragment = document.createDocumentFragment();
         let text = document.createElement("h2");
-        text.textContent = `Usuario modificado exitosamente con ID ${id_usuario.value}`;
+        text.textContent = `Vehículo modificado exitosamente con ID ${placa.value}`;
         text.className = "textUpdateConfirmar";
         fragment.append(text);
         document.getElementById("mensaje").append(fragment);
-        id_usuario.value = "";
-        telefono.value = "";
-        email.value = "";
-        contacto_emergencia.value = "";
+        // id_usuario.value = "";
+        placa.value = "";
+        marca.value = "";
+        modelo.value = "";
       });
   });
 });

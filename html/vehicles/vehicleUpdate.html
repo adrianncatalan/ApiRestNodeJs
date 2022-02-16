@@ -9,11 +9,16 @@
     <link rel="stylesheet" href="/css/commons.css">
     <script src="/js/vehicles/vehicleUpdate.js"></script>
     <link rel="stylesheet" href="/css/vehicles.css">
+    <link rel="stylesheet" href="/css/vover.css">
 </head>
 
 <body>
     <div class="contenedor_tittle">
         <h1 class="tittle">Modificar vehículo</h1>
+    </div>
+
+    <div id="volver">
+        <a href="/html/principal.html">Vuelve al menú principal</a>
     </div>
 
     <nav>
@@ -41,24 +46,24 @@
 
         <div id="dataUserId" class="form">
             <div class="form_header">
-                <h1 class="form_tittle">Ingrese los datos para modificar al usuario</h1>
+                <h1 class="form_tittle">Ingrese los datos para modificar el vehículo</h1>
             </div>
 
-            <label class="form_label">ID de usuario:</label>
+            <!-- <label class="form_label">ID de usuario:</label>
             <input id="idUser" maxlength="20" type="text" name="id_usuario" class="form_input"
-                placeholder="Escriba su ID de usuario" required>
+                placeholder="Escriba su ID de usuario" required> -->
 
-            <label class="form_label">Teléfono:</label>
-            <input id="telefono" maxlength="15" type="tel" name="telefono" class="form_input"
-                placeholder="Escriba su teléfono" required>
+            <label class="form_label">Placa:</label>
+            <input id="placa" maxlength="20" type="text" name="id_usuario" class="form_input"
+                placeholder="Escriba la placa del vehículo" required>
 
-            <label class="form_label">Email:</label>
-            <input id="email" maxlength="40" type="email" name="email" class="form_input" placeholder="Escriba su email"
+            <label class="form_label">Marca:</label>
+            <input id="marca" maxlength="15" type="tel" name="telefono" class="form_input"
+                placeholder="Escriba la marca del vehículo" required>
+
+            <label class="form_label">Modelo:</label>
+            <input id="modelo" maxlength="40" type="email" name="email" class="form_input" placeholder="Escriba el modelo del vehículo"
                 required>
-
-            <label class="form_label">Contacto de emergencia:</label>
-            <input id="contEmer" maxlength="15" type="tel" name="contacto_emergencia" class="form_input"
-                placeholder="Escriba su teléfono de contacto de emergencia" required>
 
             <input type="submit" id="btnAdd" class="button_submit" value="Modificar">
         </div>

@@ -5,8 +5,8 @@ window.addEventListener("load", () => {
     const id_servicio = document.getElementById("id_servicio");
     const tipo_servicio = document.getElementById("tipo_servicio");
     const descripcion = document.getElementById("descripcion");
-// 10.192.240.4
-    fetch(`http://192.168.1.161:3050/actualizar_servicio/${id_servicio.value}`, {
+// 10.192.240.4 192.168.1.161
+    fetch(`http://10.192.240.4:3050/actualizar_servicio/${id_servicio.value}`, {
       method: "PUT",
       mode: "cors",
       body: JSON.stringify({

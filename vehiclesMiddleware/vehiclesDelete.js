@@ -3,13 +3,17 @@ const eliminar_vehiculo = (req, res, connection) => {
 
     const { id } = req.params;
 
+    const result = req.body;
+
     const sql = `DELETE FROM registro_vehiculos WHERE id_usuario = "${id}"`;
 
     connection.query(sql, error => {
 
         if (error) throw error;
 
-        res.send('Vehículo eliminado exitosamente.')
+        // res.send('Vehículo eliminado exitosamente.');
+
+        res.json(result);
 
     });
 

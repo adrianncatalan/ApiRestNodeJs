@@ -9,11 +9,16 @@
     <link rel="stylesheet" href="/css/commons.css">
     <script src="/js/vehicles/dataVehicle.js"></script>
     <link rel="stylesheet" href="/css/vehicles.css">
+    <link rel="stylesheet" href="/css/vover.css">
 </head>
 
 <body>
     <div class="contenedor_tittle">
         <h1 class="tittle">Lista de vehículos</h1>
+    </div>
+
+    <div id="volver">
+        <a href="/html/principal.html">Vuelve al menú principal</a>
     </div>
 
     <nav>
@@ -40,7 +45,7 @@
     <div class="contenedor_padre">
         <div id="dataUsuarios" class="form" method="get">
             <div class="form_header">
-                <h1 class="form_tittle">Consultar lista de información de usuarios</h1>
+                <h1 class="form_tittle">Consultar lista de información de vehículos</h1>
             </div>
             <input type="submit" class="button_submit" value="Consultar">
         </div>
@@ -49,16 +54,10 @@
             <thead>
                 <tr>
                     <th>ID Usuario</th>
-                    <th>Nombre</th>
-                    <th>Apellido</th>
-                    <th>Teléfono</th>
-                    <th>Email</th>
-                    <th>Contacto de emergencia</th>
+                    <th>Marca</th>
+                    <th>Modelo</th>
+                    <th>Placa</th>
                     <th>Fecha de alta</th>
-                    <th>Nº de vehiculos</th>
-                    <th>Departamento</th>
-                    <th>Cargo</th>
-                    <th>Administrador</th>
                 </tr>
             </thead>
             <tbody id="tBody">

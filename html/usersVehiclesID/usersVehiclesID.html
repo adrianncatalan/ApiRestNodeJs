@@ -5,16 +5,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modificar servicio</title>
+    <title>Servicio por ID</title>
     <link rel="stylesheet" href="/css/commons.css">
-    <script src="/js/servicess/serviceUpdate.js"></script>
-    <link rel="stylesheet" href="/css/services.css">
+    <script src="/js/servicess/serviceId.js"></script>
     <link rel="stylesheet" href="/css/vover.css">
+    <link rel="stylesheet" href="/css/usersVehiclesID.css">
+
 </head>
 
 <body>
     <div class="contenedor_tittle">
-        <h1 class="tittle">Modificar servicio</h1>
+        <h1 class="tittle">Información de servicio por ID</h1>
     </div>
 
     <div id="volver">
@@ -45,27 +46,27 @@
 
         <div id="dataUserId" class="form">
             <div class="form_header">
-                <h1 class="form_tittle">Ingrese los datos para modificar el servicio</h1>
+                <h1 class="form_tittle">Consultar información de vehículo y servicio filtrada por ID de servicio</h1>
             </div>
-
-            <label class="form_label">ID servicio:</label>
-            <input id="id_servicio" maxlength="20" type="text" name="id_usuario" class="form_input"
-                placeholder="Escriba el ID de servicio" required>
-
-            <label class="form_label">Tipo de servicio:</label>
-            <input id="tipo_servicio" maxlength="15" type="text" name="telefono" class="form_input"
-                placeholder="Escriba su teléfono" required>
-
-            <label class="form_label">Descripción del servicio:</label>
-            <input id="descripcion" maxlength="40" type="text" name="email" class="form_input" placeholder="Escriba la descripción del servicio"
+            <label for="id_servicio" class="form_label">ID de servicio:</label>
+            <input type="number" name="id_usuario" class="form_input" placeholder="Escriba el ID el servicio" value=""
                 required>
-
-            <input type="submit" id="btnAdd" class="button_submit" value="Modificar">
+            <input type="submit" class="button_submit" value="Consultar">
         </div>
 
-        <div id="mensaje">
-
-        </div>
+        <table id="table">
+            <thead>
+                <tr>
+                    <th>ID servicio</th>
+                    <th>Placa</th>
+                    <th>Tipo servicio</th>
+                    <th>Descripción del servicio</th>
+                    <th>Fecha de alta</th>
+                </tr>
+            </thead>
+            <tbody id="tBody">
+            </tbody>
+        </table>
 
         <div id="iFrame">
             <h1>Ubicación del taller</h1>
@@ -74,22 +75,21 @@
                 width="600" height="450" style="border:0;" loading="lazy">
             </iframe>
         </div>
-    </div>
-    </div>
-    <div id="iframe">
 
-        <footer>
-            <img class="img1" src="img/LogoMachineBreak.png  " alt="">
-            <img class="img2" src="../../img/LogoMachineBreak.png" alt="">
-            <h2>Technical Support</h1>
-                <div class="parrafos">
-                    <a href="">Teléfono: (+34) 555 55 55</a>
-                    <a href="">Email: support@machinebreak.com</a>
-                    <a href="">Terms of service</a>
-                    <a href="">Privacy policy</a>
-                    <p>© 2021 Todos los derechos reservados</p>
-                </div>
-        </footer>
+    </div>
+
+    <footer>
+        <img class="img1" src="img/LogoMachineBreak.png  " alt="">
+        <img class="img2" src="../../img/LogoMachineBreak.png" alt="">
+        <h2>Technical Support</h1>
+            <div class="parrafos">
+                <a href="">Teléfono: (+34) 555 55 55</a>
+                <a href="">Email: support@machinebreak.com</a>
+                <a href="">Terms of service</a>
+                <a href="">Privacy policy</a>
+                <p>© 2021 Todos los derechos reservados</p>
+            </div>
+    </footer>
 
 </body>
 

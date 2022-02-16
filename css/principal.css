@@ -14,7 +14,7 @@ body {
 }
 
 nav {
-    margin-top: 1.5em;
+    margin-bottom: 10em;
 }
 
 ul {
@@ -25,13 +25,12 @@ ul {
 }
 
 ul li {
-    margin-top: 15em;
-    
+    margin-top: 7em;
 }
 
 ul a {
     text-decoration: none;
-    font-size: 4em;
+    font-size: 2em;
     font-family: sans-serif;
     color: crimson;
     padding: 1em;

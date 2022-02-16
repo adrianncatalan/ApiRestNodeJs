@@ -14,8 +14,8 @@ window.addEventListener("load", () => {
     const departamento = document.getElementById("depa");
     const cargo = document.getElementById("cargo");
     const administrador = document.getElementById("admin");
-// 10.192.240.4
-    fetch("http://192.168.1.161:3050/agregar_usuario", {
+// 10.192.240.4 192.168.1.161
+    fetch("http://10.192.240.4:3050/agregar_usuario", {
       method: "POST",
       mode: "cors",
       body: JSON.stringify({

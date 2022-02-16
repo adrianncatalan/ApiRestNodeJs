@@ -9,11 +9,11 @@ const lista_vehiculos = (req, res, connection) => {
 
         if (results.length > 0) {
 
-            res.json(results);
+            return res.json(results);
 
         } else {
 
-            res.send('No hay registros de vehiculos en la base de datos.')
+            return res.send('No hay registros de vehiculos en la base de datos.')
         }
 
     });

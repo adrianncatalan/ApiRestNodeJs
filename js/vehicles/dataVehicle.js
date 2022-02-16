@@ -3,8 +3,8 @@ window.addEventListener('load', () => {
     const btnIdUser = document.getElementsByClassName('button_submit')[0];
 
     btnIdUser.addEventListener('click', () => {
-
-        fetch('http://10.192.240.4:3050/lista_usuarios')
+// 10.192.240.4 192.168.1.161
+        fetch('http://10.192.240.4:3050/lista_vehiculos')
 
             .then(response => response.ok ? Promise.resolve(response) : Promise.reject(response))
 
@@ -39,7 +39,7 @@ window.addEventListener('load', () => {
 
                 }
 
-                btnIdUser.value = "Cerrar lista de usuarios";
+                btnIdUser.value = "Cerrar lista de vehículos";
 
             });
 
@@ -47,7 +47,7 @@ window.addEventListener('load', () => {
 
     btnIdUser.addEventListener('click', () => {
 
-        if (btnIdUser.value === "Cerrar lista de usuarios") {
+        if (btnIdUser.value === "Cerrar lista de vehículos") {
 
             window.location.reload();
         }

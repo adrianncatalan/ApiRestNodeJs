@@ -5,13 +5,17 @@ const actualizar_vehiculo = (req, res, connection) => {
 
     const { marca, modelo } = req.body;
 
-    const sql = `UPDATE registro_vehiculos SET marca = "${marca}", modelo= "${modelo}" WHERE id_usuario = "${id}"`;
+    const result = req.body;
+
+    const sql = `UPDATE registro_vehiculos SET marca = "${marca}", modelo = "${modelo}" WHERE placa = "${id}"`;
 
     connection.query(sql, error => {
 
         if (error) throw error;
 
-        res.send('Vehículo actualizado exitosamente.')
+        // res.send('Vehículo actualizado exitosamente.');
+
+        res.json(result);
 
     });
 

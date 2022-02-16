@@ -7,8 +7,8 @@ window.addEventListener("load", () => {
     const tipo_servicio = document.getElementById("tipo_servicio");
     const descripcion = document.getElementById("descripcion");
     const fecha_alta = document.getElementById("date");
-// 10.192.240.4
-    fetch("http://192.168.1.161:3050/agregar_servicio", {
+// 10.192.240.4 192.168.1.161
+    fetch("http://10.192.240.4:3050/agregar_servicio", {
       method: "POST",
       mode: "cors",
       body: JSON.stringify({

@@ -3,8 +3,8 @@ window.addEventListener('load', () => {
     const btnIdUser = document.getElementsByClassName('button_submit')[0];
 
     btnIdUser.addEventListener('click', () => {
-// 10.192.240.4
-        fetch('http://192.168.1.161:3050/lista_usuarios')
+// 10.192.240.4 192.168.1.161
+        fetch('http://10.192.240.4:3050/lista_usuarios')
 
             .then(response => response.ok ? Promise.resolve(response) : Promise.reject(response))
 

@@ -6,8 +6,8 @@ window.addEventListener("load", () => {
     const telefono = document.getElementById("telefono");
     const email = document.getElementById("email");
     const contacto_emergencia = document.getElementById("contEmer");
-// 10.192.240.4
-    fetch(`http://192.168.1.161:3050/actualizar_usuario/${id_usuario.value}`, {
+// 10.192.240.4 192.168.1.161
+    fetch(`http://10.192.240.4:3050/actualizar_usuario/${id_usuario.value}`, {
       method: "PUT",
       mode: "cors",
       body: JSON.stringify({

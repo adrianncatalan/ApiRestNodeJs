@@ -1,0 +1,27 @@
+#volver{
+    display: flex;
+    margin-left: 3em;
+    margin-bottom: 5em;
+}
+
+#volver a{
+    text-decoration: none;
+    color: white;
+    font-size: 2em;
+    font-family: sans-serif;
+    color: crimson;
+    padding: 1em;
+    opacity: 0.8;
+    font-weight: bolder;
+    text-shadow: 2px 2px 2px #2f2f2f;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 15px;
+}
+
+#volver a:hover {
+    transition: 0.3s ease;
+    color: white;
+    text-shadow: 2px 2px 2px #2f2f2f;
+    background-color: crimson;
+}
