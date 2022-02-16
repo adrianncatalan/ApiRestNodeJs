@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de usuarios</title>
+    <link rel="stylesheet" href="/css/commons.css">
+    <script src="/js/users/dataUser.js"></script>
+    <link rel="stylesheet" href="/css/users.css">
+</head>
+
+<body>
+    <div class="contenedor_tittle">
+        <h1 class="tittle">Lista de usuarios</h1>
+    </div>
+
+    <nav>
+        <ul>
+            <li>
+                <a href="/html/users/usersList.html">Lista de usuarios</a>
+            </li>
+            <li>
+                <a href="/html/users/userId.html">Usuario ID</a>
+            </li>
+            <li>
+                <a href="/html/users/userAdd.html">Agregar usuario</a>
+            </li>
+            <li>
+                <a href="/html/users/userUpdate.html">Modificar usuario</a>
+            </li>
+            <li>
+                <a href="/html/users/userDelete.html">Eliminar usuario</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="contenedor_padre">
+        <div id="dataUsuarios" class="form" method="get">
+            <div class="form_header">
+                <h1 class="form_tittle">Consultar lista de información de usuarios</h1>
+            </div>
+            <input type="submit" class="button_submit" value="Consultar">
+        </div>
+
+        <table id="table">
+            <thead>
+                <tr>
+                    <th>ID Usuario</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Teléfono</th>
+                    <th>Email</th>
+                    <th>Contacto de emergencia</th>
+                    <th>Fecha de alta</th>
+                    <th>Nº de vehiculos</th>
+                    <th>Departamento</th>
+                    <th>Cargo</th>
+                    <th>Administrador</th>
+                </tr>
+            </thead>
+            <tbody id="tBody">
+            </tbody>
+        </table>
+
+        <div id="iFrame">
+            <h1>Ubicación del taller</h1>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3199.2998817176704!2d-4.459611435436912!3d36.6913311!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd72f9c45623d2c3%3A0x7a634bd28c0cf953!2sMEDAC%20Nova%20-%20Centro%20Tecnol%C3%B3gico%20de%20FP!5e0!3m2!1ses!2ses!4v1644236883731!5m2!1ses!2ses"
+                width="600" height="450" style="border:0;" loading="lazy">
+            </iframe>
+        </div>
+    </div>
+    </div>
+    <div id="iframe">
+
+        <footer>
+            <img class="img1" src="img/LogoMachineBreak.png  " alt="">
+            <img class="img2" src="../../img/LogoMachineBreak.png" alt="">
+            <h2>Technical Support</h1>
+                <div class="parrafos">
+                    <a href="">Teléfono: (+34) 555 55 55</a>
+                    <a href="">Email: support@machinebreak.com</a>
+                    <a href="">Terms of service</a>
+                    <a href="">Privacy policy</a>
+                    <p>© 2021 Todos los derechos reservados</p>
+                </div>
+        </footer>
+
+</body>
+
+</html>

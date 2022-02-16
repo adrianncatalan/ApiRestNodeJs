@@ -5,63 +5,66 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de usuarios</title>
+    <title>Modificar usuario</title>
     <link rel="stylesheet" href="/css/commons.css">
-    <script src="/js/dataUser.js"></script>
+    <script src="/js/users/userUpdate.js"></script>
+    <link rel="stylesheet" href="/css/users.css">
 </head>
 
 <body>
     <div class="contenedor_tittle">
-        <h1 class="tittle">Lista de usuarios</h1>
+        <h1 class="tittle">Modificar usuario</h1>
     </div>
 
     <nav>
         <ul>
             <li>
-                <a href="/html/usersList.html">Lista de usuarios</a>
+                <a href="/html/users/usersList.html">Lista de usuarios</a>
             </li>
             <li>
-                <a href="/html/userId.html">Usuario ID</a>
+                <a href="/html/users/userId.html">Usuario ID</a>
             </li>
             <li>
-                <a href="/html/userAdd.html">Agregar usuario</a>
+                <a href="/html/users/userAdd.html">Agregar usuario</a>
             </li>
             <li>
-                <a href="/html/userUpdate.html">Modificar usuario</a>
+                <a href="/html/users/userUpdate.html">Modificar usuario</a>
             </li>
             <li>
-                <a href="/html/userDelete.html">Eliminar usuario</a>
+                <a href="/html/users/userDelete.html">Eliminar usuario</a>
             </li>
         </ul>
     </nav>
 
     <div class="contenedor_padre">
-        <div id="dataUsuarios" class="form" method="get">
+
+        <div id="dataUserId" class="form">
             <div class="form_header">
-                <h1 class="form_tittle">Consultar lista de información de usuarios</h1>
+                <h1 class="form_tittle">Ingrese los datos para modificar al usuario</h1>
             </div>
-            <input type="submit" class="button_submit" value="Consultar">
+
+            <label class="form_label">ID de usuario:</label>
+            <input id="idUser" maxlength="20" type="text" name="id_usuario" class="form_input"
+                placeholder="Escriba su ID de usuario" required>
+
+            <label class="form_label">Teléfono:</label>
+            <input id="telefono" maxlength="15" type="tel" name="telefono" class="form_input"
+                placeholder="Escriba su teléfono" required>
+
+            <label class="form_label">Email:</label>
+            <input id="email" maxlength="40" type="email" name="email" class="form_input" placeholder="Escriba su email"
+                required>
+
+            <label class="form_label">Contacto de emergencia:</label>
+            <input id="contEmer" maxlength="15" type="tel" name="contacto_emergencia" class="form_input"
+                placeholder="Escriba su teléfono de contacto de emergencia" required>
+
+            <input type="submit" id="btnAdd" class="button_submit" value="Agregar">
         </div>
 
-        <table id="table">
-            <thead>
-                <tr>
-                    <th>ID Usuario</th>
-                    <th>Nombre</th>
-                    <th>Apellido</th>
-                    <th>Teléfono</th>
-                    <th>Email</th>
-                    <th>Contacto de emergencia</th>
-                    <th>Fecha de alta</th>
-                    <th>Nº de vehiculos</th>
-                    <th>Departamento</th>
-                    <th>Cargo</th>
-                    <th>Administrador</th>
-                </tr>
-            </thead>
-            <tbody id="tBody">
-            </tbody>
-        </table>
+        <div id="mensaje">
+
+        </div>
 
         <div id="iFrame">
             <h1>Ubicación del taller</h1>

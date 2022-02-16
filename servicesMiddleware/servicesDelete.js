@@ -3,13 +3,17 @@ const eliminar_servicio = (req, res, connection) => {
 
     const { id } = req.params;
 
+    const result = req.body;
+
     const sql = `DELETE FROM registro_servicios WHERE id_servicio = '${id}'`;
 
     connection.query(sql, error => {
 
         if (error) throw error;
 
-        res.send('Servicio eliminado exitosamente.')
+        // res.send('Servicio eliminado exitosamente.');
+
+        res.json(result);
 
     });
 

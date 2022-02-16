@@ -5,46 +5,43 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Usuario por ID</title>
+    <title>Lista de vehículos</title>
     <link rel="stylesheet" href="/css/commons.css">
-    <script src="/js/userId.js"></script>
-
+    <script src="/js/vehicles/dataVehicle.js"></script>
+    <link rel="stylesheet" href="/css/vehicles.css">
 </head>
 
 <body>
     <div class="contenedor_tittle">
-        <h1 class="tittle">Información de usuario por ID</h1>
+        <h1 class="tittle">Lista de vehículos</h1>
     </div>
 
     <nav>
         <ul>
             <li>
-                <a href="/html/usersList.html">Lista de usuarios</a>
+                <a href="/html/vehicles/vehicleList.html">Lista de vehículos</a>
             </li>
             <li>
-                <a href="/html/userId.html">Usuario ID</a>
+                <a href="/html/vehicles/vehicleId.html">Vehículo ID</a>
             </li>
             <li>
-                <a href="/html/userAdd.html">Agregar usuario</a>
+                <a href="/html/vehicles/vehicleAdd.html">Agregar vehículo</a>
             </li>
             <li>
-                <a href="/html/userUpdate.html">Modificar usuario</a>
+                <a href="/html/vehicles/vehicleUpdate.html">Modificar vehículo</a>
             </li>
             <li>
-                <a href="/html/userDelete.html">Eliminar usuario</a>
+                <a href="/html/vehicles/vehicleDelete.html">Eliminar vehículo</a>
             </li>
         </ul>
     </nav>
 
-    <div class="contenedor_padre">
 
-        <div id="dataUserId" class="form">
+    <div class="contenedor_padre">
+        <div id="dataUsuarios" class="form" method="get">
             <div class="form_header">
-                <h1 class="form_tittle">Consultar información de usuario filtrada por ID</h1>
+                <h1 class="form_tittle">Consultar lista de información de usuarios</h1>
             </div>
-            <label for="id_usuario" class="form_label">ID de usuario:</label>
-            <input type="text" name="id_usuario" class="form_input" placeholder="Escriba su ID de usuario" value=""
-                required>
             <input type="submit" class="button_submit" value="Consultar">
         </div>
 
@@ -75,21 +72,22 @@
                 width="600" height="450" style="border:0;" loading="lazy">
             </iframe>
         </div>
-
     </div>
+    </div>
+    <div id="iframe">
 
-    <footer>
-        <img class="img1" src="img/LogoMachineBreak.png  " alt="">
-        <img class="img2" src="../../img/LogoMachineBreak.png" alt="">
-        <h2>Technical Support</h1>
-            <div class="parrafos">
-                <a href="">Teléfono: (+34) 555 55 55</a>
-                <a href="">Email: support@machinebreak.com</a>
-                <a href="">Terms of service</a>
-                <a href="">Privacy policy</a>
-                <p>© 2021 Todos los derechos reservados</p>
-            </div>
-    </footer>
+        <footer>
+            <img class="img1" src="img/LogoMachineBreak.png  " alt="">
+            <img class="img2" src="../../img/LogoMachineBreak.png" alt="">
+            <h2>Technical Support</h1>
+                <div class="parrafos">
+                    <a href="">Teléfono: (+34) 555 55 55</a>
+                    <a href="">Email: support@machinebreak.com</a>
+                    <a href="">Terms of service</a>
+                    <a href="">Privacy policy</a>
+                    <p>© 2021 Todos los derechos reservados</p>
+                </div>
+        </footer>
 
 </body>
 

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar servicio</title>
+    <link rel="stylesheet" href="/css/commons.css">
+    <link rel="stylesheet" href="/css/services.css">
+    <script src="/js/servicess/serviceAdd.js"></script>
+</head>
+
+<body>
+    <div class="contenedor_tittle">
+        <h1 class="tittle">Agregar servicio</h1>
+    </div>
+
+    <nav>
+        <ul>
+            <li>
+                <a href="/html/servicess/serviceList.html">Lista de servicios</a>
+            </li>
+            <li>
+                <a href="/html/servicess/serviceId.html">Servicio ID</a>
+            </li>
+            <li>
+                <a href="/html/servicess/serviceAdd.html">Agregar servicio</a>
+            </li>
+            <li>
+                <a href="/html/servicess/serviceUpdate.html">Modificar servicio</a>
+            </li>
+            <li>
+                <a href="/html/servicess/serviceDelete.html">Eliminar servicio</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="contenedor_padre">
+
+        <div id="dataUserId" class="form">
+            <div class="form_header">
+                <h1 class="form_tittle">Ingrese los datos para agregar el servicio</h1>
+            </div>
+
+            <label class="form_label">ID de servicio:</label>
+            <input id="id_servicio" maxlength="20" type="number" name="id_usuario" class="form_input"
+                placeholder="Escriba el ID del servicio" required>
+
+            <label class="form_label">Placa:</label>
+            <input id="placa" maxlength="20" type="text" name="nombre" class="form_input" placeholder="Escriba su placa" required>
+
+            <label class="form_label">Tipo servicio:</label>
+            <input id="tipo_servicio" maxlength="40" type="text" name="apellido" class="form_input" placeholder="Escriba su apellido"
+                required>
+
+            <label class="form_label">Descripción:</label>
+            <input id="descripcion" maxlength="15" type="text" name="telefono" class="form_input" placeholder="Escriba la descripción del servicio"
+                required>
+
+            <label class="form_label">Fecha de alta:</label>
+            <input id="date" type="date" name="fecha_alta" class="form_input" required>
+
+            <input type="submit" id="btnAdd" class="button_submit" value="Agregar">
+        </div>
+
+        <div id="mensaje">
+
+        </div>
+
+        <div id="iFrame">
+            <h1>Ubicación del taller</h1>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3199.2998817176704!2d-4.459611435436912!3d36.6913311!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd72f9c45623d2c3%3A0x7a634bd28c0cf953!2sMEDAC%20Nova%20-%20Centro%20Tecnol%C3%B3gico%20de%20FP!5e0!3m2!1ses!2ses!4v1644236883731!5m2!1ses!2ses"
+                width="600" height="450" style="border:0;" loading="lazy">
+            </iframe>
+        </div>
+    </div>
+    </div>
+    <div id="iframe">
+
+        <footer>
+            <img class="img1" src="img/LogoMachineBreak.png  " alt="">
+            <img class="img2" src="../../img/LogoMachineBreak.png" alt="">
+            <h2>Technical Support</h1>
+                <div class="parrafos">
+                    <a href="">Teléfono: (+34) 555 55 55</a>
+                    <a href="">Email: support@machinebreak.com</a>
+                    <a href="">Terms of service</a>
+                    <a href="">Privacy policy</a>
+                    <p>© 2021 Todos los derechos reservados</p>
+                </div>
+        </footer>
+
+</body>
+
+</html>

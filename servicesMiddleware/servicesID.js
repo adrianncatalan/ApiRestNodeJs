@@ -3,7 +3,7 @@ const filtrar_id_servicio = (req, res, connection) => {
 
     const { id } = req.params;
 
-    const sql = `SELECT * FROM registro_servicios WHERE id_usuario = "${id}"`;
+    const sql = `SELECT * FROM registro_servicios WHERE id_servicio = "${id}"`;
 
     connection.query(sql, (error, result) => {
 

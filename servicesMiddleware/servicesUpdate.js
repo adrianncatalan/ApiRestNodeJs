@@ -5,13 +5,17 @@ const actualizar_servicio = (req, res, connection) => {
 
     const { tipo_servicio, descripcion } = req.body;
 
-    const sql = `UPDATE registro_servicios SET nombre = "${tipo_servicio}", apellido= "${descripcion}" WHERE id_servicio = "${id}"`;
+    const result = req.body;
+
+    const sql = `UPDATE registro_servicios SET tipo_servicio = "${tipo_servicio}", descripcion= "${descripcion}" WHERE id_servicio = "${id}"`;
 
     connection.query(sql, error => {
 
         if (error) throw error;
 
-        res.send('Servicio actualizado exitosamente.')
+        // res.send('Servicio actualizado exitosamente.');
+
+        res.json(result);
 
     });
 

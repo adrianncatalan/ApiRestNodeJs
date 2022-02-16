@@ -14,6 +14,7 @@ const actualizar_usuario = (req, res, connection) => {
     // res.send('Usuario actualizado exitosamente.');
 
     res.json(result);
+    
   });
 };
 
